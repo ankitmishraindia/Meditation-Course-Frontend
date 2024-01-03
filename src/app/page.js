@@ -56,9 +56,9 @@ export default function Home() {
 
   return (
     <div className='w-full space-y-0'>
-
+{/* *******************************header with image********************** */}
         <header className='w-full h-[500px] relative'>
-           <Image src='/header-image.jpeg' layout='fill' objectFit='cover' alt='header-image'/>
+           <Image src='/header-image.jpeg' fill={true} style={{objectFit:'cover'}}  alt='header-image'/>
            <div className='absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,0,0,0.8),rgba(0,0,0,0.1))]'></div>
            <div className='absolute left-32 bottom-10  w-1/2 space-y-1'>
               <h3 className='text-3xl font-bold text-gray-300'>{instructor.name}</h3>
@@ -66,6 +66,7 @@ export default function Home() {
            </div>
         </header>
 
+{/* ****************************main part(remaing part of the page) ********/}
         <main className='w-full relative space-y-7'>
 
            <div className='w-[60%] pl-[15%] space-y-5'>
@@ -74,9 +75,11 @@ export default function Home() {
                  <div className='py-2 px-10 font-semibold text-xl cursor-pointer'>INSTRUCTOR</div>
                  <div className='py-2 px-10 font-semibold text-xl cursor-pointer'>REVIEWS</div>
                </div>
+               {/* ************About the course*********** */}
                <h2 className='text-3xl font-bold'>About the course</h2>
                <div className='space-y-4 text-xl' dangerouslySetInnerHTML={{__html:course.about.html_content}}>
                </div>
+               {/* **********What to expect ************** */}
                <h2 className='text-3xl font-semibold'>What to expect from the course</h2>
                <div className='text-xl'>
                   {expected_html}
@@ -88,7 +91,7 @@ export default function Home() {
                   </div>
                </div>
            </div>
-
+        {/* ***************************Fee amount section in right side*********** */}
            <div className='absolute w-[280px] h-[300px] bg-violet-50 right-40 -top-20 p-5 flex flex-col justify-between'>
                <div>
                   <p className='font-bold'>Course fees</p>
@@ -113,12 +116,12 @@ export default function Home() {
                </div>
                <button className='bg-violet-800 text-white py-2 w-full rounded-2xl text-sm font-bold'>Register Today</button>
            </div>
-
+          {/* *********************About the instructor************* */}
            <div className='space-y-2 w-[94%] pl-[15%] py-8'>
                <h2 className='text-3xl font-bold'>About the Instructor</h2>
                <div className='flex gap-5'>
                   <div className='text-sm rounded-full w-[100px] h-[100px] overflow-hidden relative'>
-                     <Image src='/instructor-image.jpeg' layout='fill' objectFit='cover' alt='instructor-image'/>
+                     <Image src='/instructor-image.jpeg' fill={true} style={{objectFit:'cover'}} alt='instructor-image'/>
                   </div>
                   <div className='space-y-1'>
                      <div className='text-xl min-h-32' dangerouslySetInnerHTML={{__html:about_instructor.html_content}}></div>
@@ -144,6 +147,7 @@ export default function Home() {
                   
                </div>
            </div>
+           {/* testimonial*************** */}
            <div className='relative w-full h-[300px] bg-gray-100 flex flex-col items-center justify-center space-y-5'>
                <div className='absolute top-1/2 left-[15%] w-[70%] flex justify-between'>
                   <IoIosArrowBack size={40} className='bg-gray-400 border rounded-full cursor-pointer'/>
@@ -154,7 +158,7 @@ export default function Home() {
                </p>
                <div className='flex gap-3 items-center'>
                   <div className='w-[30px] h-[30px] rounded-full overflow-hidden relative'>
-                     <Image src='/reviewer.jpeg' layout='fill' objectFit='cover'alt='review-image'/>
+                     <Image src='/reviewer.jpeg' fill={true} style={{objectFit:'cover'}} alt='review-image'/>
                   </div>
                   <div className='space-y-0'>
                      <p className='text-sm font-semibold'>

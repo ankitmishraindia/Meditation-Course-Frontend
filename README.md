@@ -2,7 +2,8 @@
 
 This is a course page(frontend) for meditators, who want to learn specific spiritual techniques.
 
-### How to use
+### How to use:
+
 
 1. Clone this project into your system.
 ```
@@ -20,7 +21,14 @@ This is a course page(frontend) for meditators, who want to learn specific spiri
 ```
   npm run dev
 ```
+#### First way:change page code
 5. Now you can change your page.js file in src/app  for desired output.
+
+#### Second way: change in json
+
+5. You can also change page without making changes in page code.
+Go to src/Data and change page
+
 
 ### How to create
 
